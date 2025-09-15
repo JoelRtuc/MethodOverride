@@ -9,11 +9,13 @@
             bool heightIsInt, weightIsInt;
             //vissa skriver heltal vissa skriver decimaler jag gör en metod för varje med samma namn
             Console.WriteLine("Enter your weight!");
-            if (int.TryParse(Console.ReadLine(), out heightInt))
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out heightInt))
             {
                 heightIsInt = true;
             }
-            else if (double.TryParse(Console.ReadLine(), out heightDoub))
+            else if (double.TryParse(input, out heightDoub))
             {
                 heightIsInt = false;
             }
@@ -24,11 +26,13 @@
             }
 
             Console.WriteLine("Enter your height!");
-            if (int.TryParse(Console.ReadLine(), out weightInt))
+            string input1 = Console.ReadLine();
+
+            if (int.TryParse(input1, out weightInt))
             {
                 weightIsInt = true;
             }
-            else if (double.TryParse(Console.ReadLine(), out weightDoub))
+            else if (double.TryParse(input1, out weightDoub))
             {
                 weightIsInt = false;
             }
@@ -59,25 +63,22 @@
         }
         static void WeightHeight(int height, int weight)
         {
-            Console.WriteLine(height + weight);
+            Console.WriteLine("You are " + height + " tall and weigh " + weight);
         }
 
         static void WeightHeight(double height, int weight)
         {
-            Console.WriteLine(height + weight);
-
+            Console.WriteLine("You are " + height + " tall and weigh " + weight);
         }
 
         static void WeightHeight(int height, double weight)
         {
-            Console.WriteLine(height + weight);
-
+            Console.WriteLine("You are " + height + " tall and weigh " + weight);
         }
 
         static void WeightHeight(double height, double weight)
         {
-            Console.WriteLine(height + weight);
-
+            Console.WriteLine("You are " + height + " tall and weigh " + weight);
         }
     }
 }
