@@ -8,7 +8,7 @@
             double heightDoub = 0, weightDoub = 0;
             bool heightIsInt, weightIsInt;
             //vissa skriver heltal vissa skriver decimaler jag gör en metod för varje med samma namn
-            Console.WriteLine("Enter your weight!");
+            Console.WriteLine("Enter your height!");
             string input = Console.ReadLine();
 
             if (int.TryParse(input, out heightInt))
@@ -25,7 +25,7 @@
                 return;
             }
 
-            Console.WriteLine("Enter your height!");
+            Console.WriteLine("Enter your weight!");
             string input1 = Console.ReadLine();
 
             if (int.TryParse(input1, out weightInt))
@@ -52,8 +52,7 @@
             }
             else if (heightIsInt && !weightIsInt)
             {
-                WeightHeight(weightInt, weightDoub);
-
+                WeightHeight(heightInt, weightDoub);
             }
             else
             {
